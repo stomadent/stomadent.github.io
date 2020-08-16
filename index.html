@@ -17,7 +17,102 @@
     
     <script src="files/bjqs-1.3.min.js"></script>
    <link rel="stylesheet" href="files/bjqs.html">
-	 
+	 <style>
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+<link rel="shortcut icon" type="image/ico" href="files/logo2.ico"/>
   </head>
  
  
@@ -32,15 +127,14 @@
 		
 	
 		<div style="font-size: 14px; margin-top: 15px; text-align: center; float: left; margin-left: 80px;">
-		<b><span style="color: black; font-size: 18px;">Нам</span><span style="color: red; font-size: 30px;">13</span> <span style="color: black; font-size: 18px;">лет!</span> <br> <span style="color: black; font-size: 18px;">Больше</span><span style="color: red; font-size: 18px;"> 25 000 </span><span style="color: black; font-size: 18px;">пациентов</span></b>
+		<b><span style="color: black; font-size: 18px;">Нам</span><span style="color: #3498db; font-size: 30px;">13</span><span style="color: black; font-size: 18px;">лет!</span></b>
 		</div>
 		
 		
 		
-		<div style="font-size: 14px; margin-top: 15px; text-align: center; float: left; margin-left: 80px;">Наш телефон! Звоните! <br>
-		<span style="font-size: 24px;"><b>+7 343 289 73 88</b></span> <br>
-		
-		<br>
+		<div style="font-size: 14px; margin-top: 15px; text-align: center; float: left; margin-left: 80px;">Наши контакты! Звоните, пишите! <br>
+		<span style="font-size: 12px;"><b>+7 343 289 73 88</b></span> <br>
+		<span style="font-size: 12px;"><b>WhatsApp: +7 912 246 88 26</b></span> <br>
 		
 		
 		</div>
@@ -56,11 +150,37 @@
 	
 	<div id="slider_and_zayvka">
 	
-		<div id="slide" style="height: 334px; max-width: 630px; position: relative;"><div class="bjqs-wrapper" style="width: 630px; height: 334px; overflow: hidden; position: relative;"><ul class="bjqs" style="height: 334px; width: 4410px; left: -1260px; display: block;"><li class="bjqs-slide" style="height: 334px; width: 630px; display: list-item; float: left; position: relative;" data-clone="first" data-slide="0"><a href="#"><img src="files/slide3.png"></a></li>
-          <li class="bjqs-slide" style="height: 334px; width: 630px; float: left; position: relative; display: list-item;"><a href="#"><img src="files/slide1.PNG"></a></li>
-          <li class="bjqs-slide" style="height: 334px; width: 630px; float: left; position: relative; display: list-item;"><a href="#"><img src="files/slide2.png"></a></li>
-		  <li class="bjqs-slide" style="height: 334px; width: 630px; float: left; position: relative; display: list-item;"><a href="#"><img src="files/slide3.png"></a></li>
-         <li class="bjqs-slide" style="height: 334px; width: 630px; display: list-item; float: left; position: relative;" data-clone="last" data-slide="0"><a href="#"><img src="files/slide1.PNG"></a></li></ul></div>
+		<div id="slide" style="height: 334px; max-width: 800px; position: relative;"><div class="bjqs-wrapper" style="width: 630px; height: 334px; overflow: hidden; position: relative;">
+			
+			<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="files/11.gif" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="files/10.gif" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="files/9.png" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+		</div>
         <!-- Картинки для слайдера со ссылками -->
         
 
@@ -275,9 +395,12 @@
 	
 		<img src="files/logo3.png" style="width: 250px; float: left;">
  
-		<div style="font-size: 14px; margin-top: 10px; text-align: center; float: left; margin-left: 450px;">Наш телефон. Звоните! <br>
- 
-		<span style="font-size: 24px;"><b>+7 343 289 73 88</b></span> <br>
+		<div style="font-size: 14px; margin-top: 10px; text-align: center; float: left; margin-left: 450px;">Наши контакты. Звоните, пишите! <br>
+
+			
+		<span style="font-size: 12px;"><b>+7 343 289 73 88</b></span> <br>
+		<span style="font-size: 12px;"><b>WhatsApp: +7 912 246 88 26</b></span> <br>
+
 		
 		</div>
 		
@@ -427,6 +550,34 @@ phone:jQuery("#phone2").val()},
 </script>
 
 
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 
  
  
